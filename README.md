@@ -4,7 +4,7 @@ Software of the article: Parametric study of organic rankine working fluids via 
 # WHRS
 This software implements a simulation and a optimization of a combined waste heat recovery system (WHRS) composed of four subsystems as is described in the article:</p>
 
-_Díaz-Secades, L. A., González, R., Rivera, N., Montañés, E., & Quevedo, J. R. (2023). Waste heat recovery system for marine engines optimized through a preference learning rank function embedded into a Bayesian optimizer. Ocean Engineering, 281, 114747._
+_Díaz-Secades, L. A., González, R., Rivera, N., Quevedo, J. R., Montañés, & E.. Parametric study of organic rankine working fluids via bayesian optimization of a preference learning ranking for a waste heat recovery system applied to a case study marine engine. (Under review)._
 
 There are two implementations of the WHRS simulator used for different goals.
 
@@ -68,6 +68,26 @@ A cross validation is performed to estimate the model's error.
 
 ### Optimize the WHRS
 To execute this stage execute `optimizeModel.py`.
+
+The three fluids used in this implementation are: `R1233zd(E)` `NOVEC649` `SES36`
+The variable fluids in line 31 sets the list of the used fluids. This variable must be assigned with a list of numbers, corresponding to the Id of the allowed fluids indicated in the next list:
+ `0:Ammonia` 
+` 1:Cyclohexane`
+` 2:Hexane`
+` 3:Propane`
+` 4:Propylene`
+` 5:Toluene`
+` 6:R1233zd(E)`
+` 7:R1234ZE(Z)`
+` 8:R1234Yf`
+` 9:R161`
+`10:IsoButane`
+`11:Dimethyl Ether`
+`12:n-Pentane`
+`13:1,2-Dichloroethane`
+`14:Novec 649`
+`15:SES36`
+
 
 A Bayesian optimization procedure is used in this stage to carry out the optimizations.
 
